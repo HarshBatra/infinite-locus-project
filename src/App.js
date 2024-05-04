@@ -6,11 +6,15 @@ import DailyForecast from "./Components/DailyForecast";
 
 const App = () => {
   return (
-    <div>
+    <div className="p-10 md:p-20 bg-sky-200 h-screen">
       <SearchBar />
-      <CurrentWeather />
-      <HourlyForecast />
-      <DailyForecast />
+      <div>
+        <CurrentWeather />
+        <div>
+          <HourlyForecast />
+          <DailyForecast />
+        </div>
+      </div>
     </div>
   );
 };

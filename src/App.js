@@ -37,14 +37,14 @@ const App = () => {
     console.log(search)
   };
 
-  console.log(CurrentWeatherdata)
+  console.log(CurrentWeatherdata);
 
   return (
-    <div className="p-10 md:p-20 bg-sky-200 h-screen">
+    <div className="p-10 md:p-20 bg-sky-200 h-screen text-sky-800">
       <SearchBar city={city} setCity={setCity} handleSearch={handleSearch} />
-      <div>
-        <CurrentWeather />
-        <div>
+      <div className="flex flex-col md:flex-row justify-center md:justify-around mt-10 gap-8">
+        <CurrentWeather CurrentWeatherdata={CurrentWeatherdata} ForecastWeatherData={ForecastWeatherData}/>
+        <div className="gap-4 flex flex-col md:w-2/3">
           <HourlyForecast />
           <DailyForecast />
         </div>
